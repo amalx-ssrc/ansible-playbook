@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install vlc and on
+    package:
+      name:
+        - "{{ vlc_pack}}"
+        - "{{ git_pack}}"
+      state: latest
